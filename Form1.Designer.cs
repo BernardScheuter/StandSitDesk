@@ -1,7 +1,7 @@
 ﻿
 namespace StandSitDesk
 {
-    partial class Form1
+    partial class lblForm1
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,9 @@ namespace StandSitDesk
             this.lblTitel = new System.Windows.Forms.Label();
             this.btnResetTimer = new System.Windows.Forms.Button();
             this.lblTimer = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lblInterval = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitel
@@ -53,7 +55,7 @@ namespace StandSitDesk
             this.btnResetTimer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnResetTimer.Size = new System.Drawing.Size(75, 23);
             this.btnResetTimer.TabIndex = 1;
-            this.btnResetTimer.Text = "Reset Timer";
+            this.btnResetTimer.Text = "Start/Reset";
             this.btnResetTimer.UseVisualStyleBackColor = true;
             this.btnResetTimer.Click += new System.EventHandler(this.btnResetTimer_Click);
             // 
@@ -68,27 +70,36 @@ namespace StandSitDesk
             this.lblTimer.Text = "resterende tijd voor switch";
             this.lblTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // numericUpDown1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 116);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.numericUpDown1.Location = new System.Drawing.Point(98, 89);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDown1.TabIndex = 4;
             // 
-            // Form1
+            // lblInterval
+            // 
+            this.lblInterval.AutoSize = true;
+            this.lblInterval.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInterval.Location = new System.Drawing.Point(18, 116);
+            this.lblInterval.Name = "lblInterval";
+            this.lblInterval.Size = new System.Drawing.Size(41, 13);
+            this.lblInterval.TabIndex = 5;
+            this.lblInterval.Text = "label1";
+            // 
+            // lblForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 186);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblInterval);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.btnResetTimer);
             this.Controls.Add(this.lblTitel);
-            this.Name = "Form1";
+            this.Name = "lblForm1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,7 +110,8 @@ namespace StandSitDesk
         private System.Windows.Forms.Label lblTitel;
         private System.Windows.Forms.Button btnResetTimer;
         private System.Windows.Forms.Label lblTimer;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label lblInterval;
     }
 }
 

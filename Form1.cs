@@ -11,33 +11,28 @@ using System.Windows.Forms;
 
 namespace StandSitDesk
 {
-    public partial class Form1 : Form
+    public partial class lblForm1 : Form
     {
         public System.Timers.Timer mijnTimer;
         public int interval;
-        public Form1()
+        public lblForm1()
         {
             InitializeComponent();
-            lblTitel.Text = "StandSitDesk V0.1";
-            WaitforTimerAsync();
+            lblTitel.Text = "StandSitDesk V0.2";
+            numericUpDown1.Minimum = 15;
+            numericUpDown1.Value = 45;
+            numericUpDown1.Maximum = 120;
         }
-        public static async Task WaitforTimerAsync()
+        public static async Task WaitforTimerAsync(int lokaalGetal)
         {
-            await Task.Run(() =>
-            {
-                Console.WriteLine("wacht seconden:  10");
-                Task.Delay(10 * 1000).Wait();
-            });
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Iets om op te clikken tijdens Await task");
+            await Task.Delay(lokaalGetal * 60 * 1000); 
+            MessageBox.Show(DateTime.Now.ToString("HH:mm") + " Tijd om je bureau in hoogte te wisselen!");
         }
         private void btnResetTimer_Click(object sender, EventArgs e)
         {
-            // code om timer op 0 of whatever te zetten.
-            Console.WriteLine("Timer is geReset!");
+            interval = Convert.ToInt32(numericUpDown1.Value);
+            lblInterval.Text = "Timer is geStart met interval van: " + interval + " minuten";
+            WaitforTimerAsync(interval);
         }
     }
 }
