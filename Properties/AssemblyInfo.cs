@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Resources;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,9 +7,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("StandSitDesk")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Because I'm a lazy IT dude... and need to stand up... sometimes...:P")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Bernard Scheuter Inc.")]
 [assembly: AssemblyProduct("StandSitDesk")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
@@ -17,7 +18,7 @@ using System.Runtime.InteropServices;
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
 // COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(false)]
+[assembly: ComVisible(true)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("8a573563-2707-4a33-9746-0c0f983af023")]
@@ -34,3 +35,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguage("en")]

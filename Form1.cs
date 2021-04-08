@@ -18,10 +18,11 @@ namespace StandSitDesk
         public lblForm1()
         {
             InitializeComponent();
-            lblTitel.Text = "StandSitDesk V0.2";
+            lblTimer.Text = "Wanneer is het weer eens tijd om je zit/sta bureau in hoogte te wisselen?";
             numericUpDown1.Minimum = 15;
             numericUpDown1.Value = 45;
             numericUpDown1.Maximum = 120;
+            
         }
         public static async Task WaitforTimerAsync(int lokaalGetal)
         {
@@ -31,8 +32,20 @@ namespace StandSitDesk
         private void btnResetTimer_Click(object sender, EventArgs e)
         {
             interval = Convert.ToInt32(numericUpDown1.Value);
-            lblInterval.Text = "Timer is geStart met interval van: " + interval + " minuten";
+            DateTime newTime = DateTime.Now.AddMinutes(interval);
+            lblSwitch.Text = "Timer is geStart met interval van: " + interval + " minuten";
+            lblInterval.Text = "Dus hoogte verstellen om: " + newTime.ToString("HH:mm") + " uur";
             WaitforTimerAsync(interval);
+        }
+
+        private void lblSwitch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblInterval_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
